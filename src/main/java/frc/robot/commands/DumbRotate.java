@@ -1,3 +1,4 @@
+package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
@@ -40,7 +41,7 @@ public class DumbRotate extends Command {
     double Zangle = Robot.driveSub.ADGyro.getAngle() ;
 
     //calculate yaw angle remaining
-    double AbsYawAngleRemaining = Math.abs(YawTarget - (Robot.ADGyro.getAngle()));
+    double AbsYawAngleRemaining = Math.abs(YawTarget - (Robot.driveSub.ADGyro.getAngle()));
     System.out.println("Z:" + Zangle + " Target: " + YawTarget + " Remaining"+AbsYawAngleRemaining);
     //if less than a degree, rotation is done
     if(AbsYawAngleRemaining < 12){
