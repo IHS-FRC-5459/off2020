@@ -56,7 +56,7 @@ private TalonSRX tal9;
     //turns winch
 public void goUp()
 {
-    //9
+    //motor 9
     tal9.set(ControlMode.PercentOutput, 0.5);
 }
 
