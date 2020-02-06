@@ -46,6 +46,7 @@ private TalonSRX tal1;
 private TalonSRX tal2;
 private TalonSRX tal3;
 private TalonSRX tal4;
+public TalonSRX tal9;
 private Encoder driveRightEncoder;
 private Encoder driveLeftEncoder;
 
@@ -71,6 +72,8 @@ tal3.setInverted(false);
 tal4 = new TalonSRX(4);
 //addChild("Tal4",tal4);
 tal4.setInverted(true);
+
+
         
 driveRightEncoder = new Encoder(2, 3, false, EncodingType.k4X);
 addChild("DriveRightEncoder",driveRightEncoder);
@@ -95,6 +98,9 @@ public void setLeft (double power){
     tal3.set(ControlMode.PercentOutput, power);
     tal4.set(ControlMode.PercentOutput, power);
 }
+
+
+
 public double getRightEncoder(){
     return driveRightEncoder.getDistance();
 }
