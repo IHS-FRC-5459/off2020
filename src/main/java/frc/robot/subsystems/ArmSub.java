@@ -102,9 +102,9 @@ addChild("Lim5",lim5);
         boolean[] switches = new boolean[4];
         switches[0] = lim1.get();
         switches[1] = lim2.get();
-        switches[2] = lim2.get();
-        switches[3] = lim2.get();
-        switches[4] = lim2.get();
+        switches[2] = lim3.get();
+        switches[3] = lim4.get();
+        switches[4] = lim5.get();
         return switches;
     }
 
