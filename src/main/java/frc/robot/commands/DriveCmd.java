@@ -43,8 +43,10 @@ public class DriveCmd extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.driveSub.setRight(Robot.oi.stick0.getY());
-        Robot.driveSub.setLeft(Robot.oi.stick1.getY());
+        //-1 because joystick direction has forward as negative and back as positive.
+        Robot.driveSub.setRight(Robot.oi.stick0.getY() * -1);
+        Robot.driveSub.setLeft(Robot.oi.stick1.getY() *-1);
+        
     }
 
     // Make this return true when this Command no longer needs to run execute()
