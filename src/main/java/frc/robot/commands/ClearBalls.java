@@ -12,6 +12,7 @@
 package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
+import frc.robot.subsystems.ArmSub;
 
 /**
  *
@@ -43,12 +44,21 @@ public class ClearBalls extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
+        double conveyPwr = .5;
+        double rollerPwr = .75;
+        Robot.armSub.setConveyor(conveyPwr);
+        Robot.armSub.setRoller(rollerPwr);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
+        boolean b[] = Robot.armSub.getSwitch();
+        if((b[0]==false)&&(b[1]==false)&&(b[2]==false)&&(b[3]==false)&&(b[4]==false)){
+            return true;
+        }else{
         return false;
+        }
     }
 
     // Called once after isFinished returns true
