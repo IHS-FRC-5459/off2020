@@ -61,6 +61,7 @@ public ADXRS450_Gyro ADGyro = new ADXRS450_Gyro();
 tal1 = new TalonSRX(1);
 //addChild("Tal1",tal1);
 tal1.setInverted(true);
+
         
 tal2 = new TalonSRX(2);
 //addChild("Tal2",tal2);
