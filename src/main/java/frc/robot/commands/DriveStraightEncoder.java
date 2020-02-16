@@ -54,7 +54,7 @@ public class DriveStraightEncoder extends Command {
     //for 3 feet, wheel diameter is 4 in
     //2.86 rotations
     
-    double distanceRemaining = targetDistance - (Robot.driveSub.getRightEncoderDistance()/14.3);
+    double distanceRemaining = targetDistance - (Robot.driveSub.getRightEncoderDistance()/18.84);
     double debugDist = Robot.driveSub.getRightEncoderDistance();
 
 

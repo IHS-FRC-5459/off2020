@@ -8,9 +8,10 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
 
-public class indexMove extends Command {
+public class indexMove extends Command { 
 
   boolean isFinished;
 
@@ -32,18 +33,20 @@ public class indexMove extends Command {
     if(indArry[3] == true)
     {
       Robot.driveSub.moveBalls(0.1);
-      if(indArry[4])
+      if(indArry[3])
       {
-        Robot.driveSub.moveBalls(0);;
+        Robot.driveSub.moveBalls(0);
+        SmartDashboard.putBoolean("4th Spot Full?", indArry[3]);
       }
     }
 
     if(indArry[2] == true)
     {
       Robot.driveSub.moveBalls(0.1);
-      if(indArry[4])
+      if(indArry[2])
       {
-        Robot.driveSub.moveBalls(0);;
+        Robot.driveSub.moveBalls(0);
+        SmartDashboard.putBoolean("3rd Spot Full?", indArry[2]);
       }
 
     }
@@ -51,9 +54,10 @@ public class indexMove extends Command {
     if(indArry[1] == true)
     {
       Robot.driveSub.moveBalls(0.1);
-      if(indArry[4])
+      if(indArry[1])
       {
-        Robot.driveSub.moveBalls(0);;
+        Robot.driveSub.moveBalls(0);
+        SmartDashboard.putBoolean("2nd Spot Full?", indArry[1]);
       }
 
     }
@@ -61,15 +65,17 @@ public class indexMove extends Command {
     if(indArry[0] == true)
     {
       Robot.driveSub.moveBalls(0.1);
-      if(indArry[4])
+      if(indArry[0])
       {
-        Robot.driveSub.moveBalls(0);;
+        Robot.driveSub.moveBalls(0);
+        SmartDashboard.putBoolean("1st Spot Full?", indArry[0]);
       }
 
     }
 
     if(indArry[0] == true || indArry[1] == true || indArry[2] == true || indArry[3] == true || indArry[4] == true)
     {
+      SmartDashboard.putString("Are All Spots Full:", "Yes, all spots ared full!");
       isFinished = true;
     }
 
