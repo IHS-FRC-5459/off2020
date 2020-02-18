@@ -74,7 +74,7 @@ button2 = new JoystickButton(stick1, 1);
 //xbox = new XboxController(2);
 
 //Button button1 = new JoystickButton(xbox, 1);
-button2.whenPressed(new RotatePID(90));
+button2.whenPressed(new PIDStraight(36));
 
 
 
