@@ -24,13 +24,13 @@ public class serpentineAuto extends CommandGroup {
 
     if(fromRight)
     {
-      addSequential(new RotateToAngle(-90, 0.25));
+      addSequential(new RotatePID(-90));
       addSequential(new DriveStraightEncoder(0.25, 60));
-      addSequential(new RotateToAngle(90, 0.25));
+      addSequential(new RotatePID(90));
     }else{
-      addSequential(new RotateToAngle(90, 0.25));
+      addSequential(new RotatePID(90));
       addSequential(new DriveStraightEncoder(0.25, 60));
-      addSequential(new RotateToAngle(-90, 0.25));
+      addSequential(new RotatePID(-90));
 
     }
 
