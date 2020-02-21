@@ -83,11 +83,17 @@ liftEncoder.setPIDSourceType(PIDSourceType.kRate);
         return liftEncoder;
 
     }
+    public void resetLiftEncoder(){
+        liftEncoder.reset();
+    }
+    public double getliftEncoderValue(){
+        return liftEncoder.getDistance();
+    }
 
     // public PIDOutput getTal7() {
     //     return tal7;
 
-    // }
+    // } 
     public void setArmLift(double power){
         tal7.set(ControlMode.PercentOutput, power);
     }
