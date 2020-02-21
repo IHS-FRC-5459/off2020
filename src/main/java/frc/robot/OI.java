@@ -80,7 +80,7 @@ stick1 = new Joystick(1);
 
 stick0 = new Joystick(0);
 xbox = new XboxController(2);
-/*
+
 
 button1 = new JoystickButton(xbox, 1); //a
 button2 = new JoystickButton(xbox, 2); //b
@@ -93,7 +93,7 @@ button2.whileHeld(new ClimberRaiseCmd());
 button3.whileHeld(new DumbArmRaiseCommand(0.25));
 button4.whileHeld(new ClimberLiftRobotCmd());
 button5.whileHeld(new DumbRollerCommand(-0.2));
-*/
+
 
 
 
