@@ -69,7 +69,7 @@ tal2.setInverted(false);
         
 tal3 = new TalonSRX(3);
 //addChild("Tal3",tal3);
-tal3.setInverted(false);
+tal3.setInverted(true);
         
 tal4 = new TalonSRX(4);
 //addChild("Tal4",tal4);
@@ -80,12 +80,12 @@ tal10.setInverted(true);
 
 
         
-driveRightEncoder = new Encoder(2, 3, false, EncodingType.k4X);
+driveRightEncoder = new Encoder(2, 3, true, EncodingType.k4X);
 addChild("DriveRightEncoder",driveRightEncoder);
 driveRightEncoder.setDistancePerPulse(1.0);
 driveRightEncoder.setPIDSourceType(PIDSourceType.kRate);
         
-driveLeftEncoder = new Encoder(4, 5, false, EncodingType.k4X);
+driveLeftEncoder = new Encoder(4, 5, true, EncodingType.k4X);
 addChild("DriveLeftEncoder",driveLeftEncoder);
 driveLeftEncoder.setDistancePerPulse(1.0);
 driveLeftEncoder.setPIDSourceType(PIDSourceType.kRate);
