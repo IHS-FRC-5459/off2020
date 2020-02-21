@@ -82,10 +82,11 @@ tal10.setInverted(true);
         
 driveRightEncoder = new Encoder(2, 3, true, EncodingType.k4X);
 addChild("DriveRightEncoder",driveRightEncoder);
+driveRightEncoder.setDistancePerPulse(18.849/1024.);
 driveRightEncoder.setDistancePerPulse(1.0);
 driveRightEncoder.setPIDSourceType(PIDSourceType.kRate);
         
-driveLeftEncoder = new Encoder(4, 5, true, EncodingType.k4X);
+driveLeftEncoder = new Encoder(4, 5, false, EncodingType.k4X);
 addChild("DriveLeftEncoder",driveLeftEncoder);
 driveLeftEncoder.setDistancePerPulse(1.0);
 driveLeftEncoder.setPIDSourceType(PIDSourceType.kRate);
