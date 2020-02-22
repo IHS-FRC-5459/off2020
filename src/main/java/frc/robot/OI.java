@@ -81,6 +81,7 @@ stick1 = new Joystick(1);
 stick0 = new Joystick(0);
 xbox = new XboxController(2);
 
+
 button1 = new JoystickButton(xbox, 1); //a
 button2 = new JoystickButton(xbox, 2); //b
 button3 = new JoystickButton(xbox, 3); // x
@@ -98,13 +99,15 @@ button5.whileHeld(new DumbRollerCommand(-0.2));
 
 
 
+
+
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
         SmartDashboard.putData("DriveCmd", new DriveCmd());
         SmartDashboard.putData("ClimberLiftRobotCmd", new ClimberLiftRobotCmd());
         SmartDashboard.putData("ClimberRaiseCmd", new ClimberRaiseCmd());
         SmartDashboard.putData("IntakeMode", new IntakeMode());
-        SmartDashboard.putData("PositionArmPID", new PositionArmPID());
+        SmartDashboard.putData("PositionArmPID", new PositionArmPID(90));
         SmartDashboard.putData("ClearBalls", new ClearBalls());
         SmartDashboard.putData("PID Rotate  90", new RotatePID(90));
 
