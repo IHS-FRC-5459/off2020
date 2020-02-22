@@ -75,8 +75,7 @@ tal4 = new TalonSRX(4);
 //addChild("Tal4",tal4);
 tal4.setInverted(false);
 
-tal10 = new TalonSRX(10);
-tal10.setInverted(false);
+
 
 
         
@@ -137,11 +136,7 @@ public void setLeft (double power){
 
 }
 
-public void moveBalls(double power)
-{
-    tal10.set(ControlMode.PercentOutput, power);
 
-}
 
 
 

@@ -84,7 +84,7 @@ button2.whenPressed(new RotatePID(90));
         SmartDashboard.putData("ClimberLiftRobotCmd", new ClimberLiftRobotCmd());
         SmartDashboard.putData("ClimberRaiseCmd", new ClimberRaiseCmd());
         SmartDashboard.putData("IntakeMode", new IntakeMode());
-        SmartDashboard.putData("PositionArmPID", new PositionArmPID());
+        //SmartDashboard.putData("PositionArmPID", new PositionArmPID());
         SmartDashboard.putData("ClearBalls", new ClearBalls());
         SmartDashboard.putData("PID Rotate  90", new RotatePID(90));
 

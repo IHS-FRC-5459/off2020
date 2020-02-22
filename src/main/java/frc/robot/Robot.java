@@ -152,6 +152,7 @@ server = CameraServer.getInstance().getServer();
 
         if (autonomousCommand != null) autonomousCommand.cancel();
         System.out.println("teleop init worked");
+        System.out.println(Robot.driveSub.ADGyro.getAngle());
         teleCommand.start();
     }
 
