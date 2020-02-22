@@ -32,20 +32,20 @@ public class indexMove extends Command {
 
     if(indArry[3] == true)
     {
-      //Robot.driveSub.moveBalls(0.1);
+      Robot.armSub.setConveyor(0.1);
       if(indArry[3])
       {
-        //Robot.driveSub.moveBalls(0);
+        Robot.armSub.setConveyor(0);
         SmartDashboard.putBoolean("4th Spot Full?", indArry[3]);
       }
     }
 
     if(indArry[2] == true)
     {
-      //Robot.driveSub.moveBalls(0.1);
+      Robot.armSub.setConveyor(0.1);
       if(indArry[2])
       {
-        //Robot.driveSub.moveBalls(0);
+        Robot.armSub.setConveyor(0);
         SmartDashboard.putBoolean("3rd Spot Full?", indArry[2]);
       }
 
@@ -53,10 +53,10 @@ public class indexMove extends Command {
 
     if(indArry[1] == true)
     {
-      //Robot.driveSub.moveBalls(0.1);
+      Robot.armSub.setConveyor(0.1);
       if(indArry[1])
       {
-        //Robot.driveSub.moveBalls(0);
+        Robot.armSub.setConveyor(0);
         SmartDashboard.putBoolean("2nd Spot Full?", indArry[1]);
       }
 
@@ -64,10 +64,10 @@ public class indexMove extends Command {
 
     if(indArry[0] == true)
     {
-      //Robot.driveSub.moveBalls(0.1);
+      Robot.armSub.setConveyor(0.1);
       if(indArry[0])
       {
-        //Robot.driveSub.moveBalls(0);
+        Robot.armSub.setConveyor(0);
         SmartDashboard.putBoolean("1st Spot Full?", indArry[0]);
       }
 
@@ -90,12 +90,13 @@ public class indexMove extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    //Robot.driveSub.moveBalls(0);
+    Robot.armSub.setConveyor(0);
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
+    end();
   }
 }
