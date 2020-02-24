@@ -46,8 +46,8 @@ private TalonSRX tal1;
 private TalonSRX tal2;
 private TalonSRX tal3;
 private TalonSRX tal4;
-public TalonSRX tal9;
-public TalonSRX tal10;
+//public TalonSRX tal9;
+//public TalonSRX tal10;
 private Encoder driveRightEncoder;
 private Encoder driveLeftEncoder;
 
@@ -75,8 +75,8 @@ tal4 = new TalonSRX(4);
 //addChild("Tal4",tal4);
 tal4.setInverted(true);
 
-tal10 = new TalonSRX(10);
-tal10.setInverted(true);
+//tal10 = new TalonSRX(10);
+//tal10.setInverted(true);
 
 
         
