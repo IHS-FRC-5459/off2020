@@ -52,6 +52,7 @@ public static DriveSub driveSub;
 public static ClimberSub climberSub;
 public static ArmSub armSub;
 public static ArmLiftSub armLiftSub;
+public static RollerSub rollerSub;
 public static UsbCamera driveCam;
 public static VideoSink server;
 
@@ -72,6 +73,7 @@ driveSub = new DriveSub();
 climberSub = new ClimberSub();
 armSub = new ArmSub();
 armLiftSub = new ArmLiftSub();
+rollerSub = new RollerSub();
 teleCommand = new DriveCmd();
 driveCam = CameraServer.getInstance().startAutomaticCapture(0);
 driveCam.setConnectionStrategy(VideoSource.ConnectionStrategy.kKeepOpen);
@@ -153,6 +155,7 @@ server = CameraServer.getInstance().getServer();
 
         if (autonomousCommand != null) autonomousCommand.cancel();
         System.out.println("teleop init worked");
+        System.out.println(Robot.driveSub.ADGyro.getAngle());
         teleCommand.start();
     }
 

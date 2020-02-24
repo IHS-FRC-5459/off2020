@@ -47,7 +47,7 @@ public class ClearBalls extends Command {
         double conveyPwr = .5;
         double rollerPwr = .75;
         Robot.armSub.setConveyor(conveyPwr);
-        Robot.armSub.setRoller(rollerPwr);
+        //Robot.rollerSub.setRoller(rollerPwr);
     }
 
     // Make this return true when this Command no longer needs to run execute()

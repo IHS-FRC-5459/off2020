@@ -44,8 +44,8 @@ public class DriveCmd extends Command {
     @Override
     protected void execute() {
         //-1 because joystick direction has forward as negative and back as positive.
-        Robot.driveSub.setRight(Robot.oi.stick0.getY() * -1);
-        Robot.driveSub.setLeft(Robot.oi.stick1.getY() *-1);
+        Robot.driveSub.setRight(Robot.oi.stick0.getY() *-1);
+        Robot.driveSub.setLeft(Robot.oi.stick1.getY() * -1);
         
     }
 

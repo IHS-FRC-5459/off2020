@@ -10,12 +10,12 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class DumbRollerCommand extends Command {
+public class DumbConveyorCommand extends Command {
   double power;
-  public DumbRollerCommand(double powerR) {
+  public DumbConveyorCommand(double powerR) {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.rollerSub);
+    requires(Robot.armSub);
     power = powerR;
   }
 
@@ -27,8 +27,7 @@ public class DumbRollerCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.rollerSub.setRoller(power);
-    System.out.println("dumb roller at: "+ power);
+    Robot.armSub.setConveyor(power);
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -40,7 +39,7 @@ public class DumbRollerCommand extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.rollerSub.setRoller(0);
+    Robot.armSub.setConveyor(0);
   }
 
   // Called when another command which requires one or more of the same
