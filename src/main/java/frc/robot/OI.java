@@ -103,6 +103,13 @@ button6.whileHeld(new DumbConveyorCommand(0.5));
 
 
         // SmartDashboard Buttons
+        SmartDashboard.putData("Autonomous: Run", new AutonomousCommand());
+        SmartDashboard.putData("Climber: Lift", new ClimberLiftRobotCmd());
+        SmartDashboard.putData("Climber: Raise", new ClimberRaiseCmd());
+        SmartDashboard.putData("Pid: Arm Raise 90", new PositionArmPID(90));
+        SmartDashboard.putData("Pid: Turn Degrees 90", new RotatePID(90));
+        SmartDashboard.putData("Pid: Straight 3 Feet", new PIDStraight(36));
+
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
         SmartDashboard.putData("DriveCmd", new DriveCmd());
         SmartDashboard.putData("ClimberLiftRobotCmd", new ClimberLiftRobotCmd());
