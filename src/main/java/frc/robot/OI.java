@@ -87,13 +87,14 @@ button2 = new JoystickButton(xbox, 2); //b
 button3 = new JoystickButton(xbox, 3); // x
 button4 = new JoystickButton(xbox, 4); //y
 button5 = new JoystickButton(xbox, 5); //ltrigger
+button6 = new JoystickButton(xbox, 6); 
 
-button1.whileHeld(new DumbRollerCommand(0.3));
-button2.whileHeld(new ClimberRaiseCmd());
-button3.whileHeld(new DumbArmRaiseCommand(0.25));
-button4.whileHeld(new ClimberLiftRobotCmd());
-button5.whileHeld(new DumbRollerCommand(-0.2));
-
+button1.whileHeld(new DumbRollerCommand(1));
+button2.whileHeld(new DumbRollerCommand(-1));
+button3.whileHeld(new DumbArmRaiseCommand(0.5));
+button4.whileHeld(new DumbArmRaiseCommand(-.5));
+button5.whileHeld(new DumbConveyorCommand(-0.5));
+button6.whileHeld(new DumbConveyorCommand(0.5));
 
 
 
