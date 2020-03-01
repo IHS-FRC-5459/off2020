@@ -10,8 +10,8 @@ import frc.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class joystickCorrection extends Command {
-  public joystickCorrection() {
+public class forwardButton extends Command {
+  public forwardButton() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
 

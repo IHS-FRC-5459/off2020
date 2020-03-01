@@ -82,6 +82,7 @@ stick1 = new Joystick(1);
 stick0 = new Joystick(0);
 xbox = new XboxController(2);
 button7 = new JoystickButton(stick1, 1);
+button7.whileHeld(new forwardButton());
 
 
 
@@ -90,7 +91,7 @@ button2 = new JoystickButton(xbox, 2); //b
 button3 = new JoystickButton(xbox, 3); // x
 button4 = new JoystickButton(xbox, 4); //y
 button5 = new JoystickButton(xbox, 5); //ltrigger
-button6 = new JoystickButton(xbox, 6); //r trigger
+button6 = new JoystickButton(stick0, 1); //lJoysticktrigger
 
 button1.whileHeld(new DumbRollerCommand(1));
 button2.whileHeld(new DumbRollerCommand(-1));
@@ -98,7 +99,7 @@ button3.whileHeld(new DumbArmRaiseCommand(0.5));
 button4.whileHeld(new DumbArmRaiseCommand(-.5));
 button5.whileHeld(new DumbConveyorCommand(-0.5));
 button6.whileHeld(new DumbConveyorCommand(0.5));
-button7.whileHeld(new joystickCorrection());
+
 
 
 
