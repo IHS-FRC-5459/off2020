@@ -67,6 +67,7 @@ public Button button4;
 public Button button5;
 public Button button6;
 public Button button7;
+private Button button8;
 
 
 
@@ -92,11 +93,13 @@ button3 = new JoystickButton(xbox, 3); // x
 button4 = new JoystickButton(xbox, 4); //y
 button5 = new JoystickButton(xbox, 5); //ltrigger
 button6 = new JoystickButton(stick0, 1); //lJoysticktrigger
+button8 = new JoystickButton(xbox, 6);
 
-button1.whileHeld(new DumbRollerCommand(1));
-button2.whileHeld(new DumbRollerCommand(-1));
-button3.whileHeld(new DumbArmRaiseCommand(0.5));
-button4.whileHeld(new DumbArmRaiseCommand(-.5));
+button1.whileHeld(new DumbRollerCommand(0.75));
+button2.whileHeld(new DumbRollerCommand(-0.75));
+button8.whileHeld(new DumbConveyorCommand(0.5));
+button3.whileHeld(new DumbArmRaiseCommand(0.4));
+button4.whileHeld(new DumbArmRaiseCommand(-.4));
 button5.whileHeld(new DumbConveyorCommand(-0.5));
 button6.whileHeld(new DumbConveyorCommand(0.5));
 
