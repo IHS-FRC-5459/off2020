@@ -114,6 +114,7 @@ public void setRight (double power){
         tal2.set(ControlMode.PercentOutput, -0.9); 
     }
 }
+
 public void setLeft (double power){
     //3 and 4
     if(!(power == 1) || !(power == -1)){
